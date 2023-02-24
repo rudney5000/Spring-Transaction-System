@@ -41,7 +41,7 @@ class TransactionServiceImpl(
         if (!exist!!)
             throw UserException("User with id ${transactionDTO.id} is not present")
 
-        if(transactionDTO.fromCustomer == "Default fromCustomer" || transactionDTO.transferredAmount == "Default amount")
+        if(transactionDTO.fromCustomer == "Default fromCustomer" || transactionDTO.toCustomer == "Default toCustomer")
             throw UserException("Complete user object is excepted")
 
         transactionRepository.save(transactionMapper.toEntity(transactionDTO))

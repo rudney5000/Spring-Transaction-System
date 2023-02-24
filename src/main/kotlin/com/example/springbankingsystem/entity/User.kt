@@ -4,12 +4,10 @@ import org.hibernate.annotations.CreationTimestamp
 import org.hibernate.annotations.UpdateTimestamp
 import java.sql.Timestamp
 import javax.persistence.*
-import javax.validation.constraints.Email
-import javax.validation.constraints.Size
 
 @Entity
 @Table(name = "Utilisateur")
-data class User (
+data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     var id: Long,

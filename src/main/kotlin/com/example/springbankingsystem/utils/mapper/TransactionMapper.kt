@@ -10,7 +10,10 @@ class TransactionMapper: Mapper<TransactionDTO, Transaction> {
         entity.id,
         entity.fromCustomer,
         entity.toCustomer,
-        entity.transferredAmount,
+        entity.number,
+        entity.withDrawl,
+        entity.transfer,
+        entity.deposit,
         entity.userId,
         entity.user,
         entity.transactionTime
@@ -20,7 +23,10 @@ class TransactionMapper: Mapper<TransactionDTO, Transaction> {
         domain.id,
         domain.fromCustomer,
         domain.toCustomer,
-        domain.transferredAmount,
+        domain.number,
+        domain.withDrawl,
+        domain.transfer,
+        domain.deposit,
         domain.userId,
         domain.user,
         domain.transactionTime
