@@ -27,7 +27,7 @@ class UserController(
 
     @PostMapping("/users")
     fun createUser(@RequestBody userDTO: UserDTO): ResponseEntity<UserDTO>{
-        return ResponseEntity(userService.saveUser(userDTO), HttpStatus.CREATED)
+        return ResponseEntity(userService.createUser(userDTO), HttpStatus.CREATED)
     }
 
     @GetMapping("/users")

@@ -17,7 +17,7 @@ interface UserService
 
     fun getUsers(): List<UserDTO>
 
-    fun saveUser(userDTO: UserDTO): UserDTO
+    fun createUser(userDTO: UserDTO): UserDTO
 
     fun updateUser(userDTO: UserDTO): UserDTO
 

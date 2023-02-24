@@ -29,7 +29,7 @@ class UserServiceImpl(
         }
     }
 
-    override fun saveUser(userDTO: UserDTO): UserDTO {
+    override fun createUser(userDTO: UserDTO): UserDTO {
         val userMap = userMapper.toEntity(userDTO)
         val user = userRepository.save(userMap)
         return userMapper.fromEntity(user)
@@ -55,5 +55,4 @@ class UserServiceImpl(
         userRepository.deleteById(id)
         return "User deleted"
     }
-
 }
